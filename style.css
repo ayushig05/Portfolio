@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair:opsz,wght@5..1200,300&family=Playpen+Sans&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(27, 26, 26);
+}
+header {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(35, 34, 34);
+}
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: none;
+    color: aliceblue;
+    margin-left: 40px;
+}
+.logo span {
+    color: rgb(196, 24, 24);
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.active {
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 160px 15% 120px;
+}
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.home-text {
+    color: aliceblue;
+    text-align: start;
+    font-family: 'Playfair', sans-serif;
+}
+.home-text .intro {
+    font-size: 71px;
+    font-weight: 800;
+}
+.home-text .intro span {
+    color: rgb(158, 60, 163);
+    margin: 0;
+    font-size: 71px;
+    font-family: 'Playfair', sans-serif;
+}
+span {
+    color: rgb(158, 60, 163);
+}
+.line {
+    width: 250px;
+    height: 4px;
+    background: rgb(209, 189, 211);
+    margin: 10px auto;
+    margin-left: 170px;
+    border-radius: 5px;
+}
+.home-text .text {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+section img {
+    height: 450px;
+    width: 300px;
+    margin-left: 90px;
+    margin-top: 40px;
+}
+
+.about {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(35, 34, 34);
+}
+.about img {
+    height: 420px;
+    width: 320px;
+    margin-left: 100px;
+}
+.about-text {
+    color: aliceblue;
+    text-align: start;
+    margin-left: 70px;
+    margin-right: 150px;
+}
+.about-text p {
+    margin-top: 20px;
+    font-family: 'Playfair', sans-serif;
+    letter-spacing: 0.5px;
+}
+h2 {
+    font-size: 4rem;
+}
+.btn {
+    padding: 8px 15px;
+    background: aliceblue;
+    border-radius: 30px;
+    width: 150px;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 25px;
+    color: rgb(158, 60, 163);
+    border: 2px solid rgb(158, 60, 163);
+}
+.btn:hover {
+    background: rgb(158, 60, 163);
+    color: aliceblue;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px rgb(158, 60, 163);
+}
+
+.skills h2 {
+    margin: 40px 45% 20px;
+}
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+.skill-box {
+    padding: 1rem;
+    color: aliceblue;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.skill-box:hover > .skill-title::after, .skill-box:hover > .skill-title::before {
+    width: 35px;
+}
+.skill-box:hover img {
+    transform: translateY(-10px);
+}
+.skill-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.skill-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 4px 0 4px 0;
+    background-color: rgb(158, 60, 163);
+    transition: 0.5s;
+}
+.skill-title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 0 4px 0 4px;
+    background-color: rgb(158, 60, 163);
+    transition: 0.5s;
+}
+.skill-box img {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.skill-box img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 130px;
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 45px 0 45px 0;
+}
+.icon {
+    width: 50px;
+    z-index: 2;
+}
+.name {
+    color: aliceblue;
+    margin-top: 0.7rem;
+    font-size: 25px;
+    font-family: 'Play Fair', sans-serif;
+}
+.skill-box p {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project {
+    background-color: rgb(35, 34, 34);
+    padding-top: 10px;
+}
+.project h2 {
+    margin: 40px 33.8% 20px;
+    display: inline;
+    color: aliceblue;
+}
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 2rem;
+    margin-top: 3rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+.project-box {
+    padding: 1rem;
+    color: aliceblue;
+    cursor: pointer;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.project-container img {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fff;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+.project-box:hover img {
+    transform: scale(1.1);
+}
+.project-title {
+    width: 317px;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(158, 60, 163));
+    position: relative;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+.project-title p {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.project-title i {
+    color: rgb(158, 60, 163);
+    margin-top: 20px;
+    font-size: 22px;
+    background: aliceblue;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.project-box:hover .project-title {
+    height: 100%;
+}
