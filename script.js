@@ -60,24 +60,10 @@ emailPattern = [...emailPattern].reverse().join("");
     if(emailPattern === "@gmail.com") {
         emailf.style.borderBottom = "1px solid rgb(158, 60, 163)";
         error.style.display = "none";
+        window.alert("Your message has been sent!");
     }
     else {
         emailf.style.borderBottom = "1px solid red";
         error.style.display = "block";
-    }
-});
-
-
-
-
-//js for alert after sending the message
-send.addEventListener("click", function() {
-    const nameset = set.value.trim();
-    const emailset = emailPattern.value.trim();
-    if (nameset === "" || emailset === "") {
-        message.textContent = "Please enter your name and email before sending.";
-    } else {
-        message.textContent = "Your message has been sent!";
-        window.alert("Your message has been sent!");
     }
 });
