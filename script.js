@@ -66,3 +66,11 @@ emailPattern = [...emailPattern].reverse().join("");
         error.style.display = "block";
     }
 });
+
+
+
+
+//js for alert after sending the message
+send.addEventListener("click", function() {
+    window.alert("Your message has been sent!");
+});
