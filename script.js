@@ -72,5 +72,12 @@ emailPattern = [...emailPattern].reverse().join("");
 
 //js for alert after sending the message
 send.addEventListener("click", function() {
-    window.alert("Your message has been sent!");
+    const nameset = set.value.trim();
+    const emailset = emailPattern.value.trim();
+    if (nameset === "" || emailset === "") {
+        message.textContent = "Please enter your name and email before sending.";
+    } else {
+        message.textContent = "Your message has been sent!";
+        window.alert("Your message has been sent!");
+    }
 });
