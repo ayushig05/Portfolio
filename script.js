@@ -29,41 +29,47 @@ window.addEventListener("scroll", scrollUp);
 
 
 
-//js for enter name in form
+//js for filling up the form
 let send = document.querySelector("#btn");
 let namef = document.querySelector('#fname');
 let name = document.querySelector(".name-details");
 let message = document.querySelector(".message");
-send.addEventListener("click", function() {
-    let set = namef.value.trim();
-    if (set === "") {
-        namef.style.borderBottom = "1px solid red";
-        message.style.display = "block";
-    }
-    else {
-        namef.style.borderBottom = "1px solid rgb(158, 60, 163)";
-        message.style.display = "none";
-    }
-});
-
-
-
-//js for enter email in form
 let email = document.querySelector("#email");
 let emailf = document.querySelector(".email-details");
 let error = document.querySelector(".error");
 let emailPattern;
+
 send.addEventListener("click", function() {
-const reversedStr = [...email.value].reverse().join("");
-emailPattern = reversedStr.slice(0,10);
-emailPattern = [...emailPattern].reverse().join("");
-    if(emailPattern === "@gmail.com") {
+    //js to enter name in the form
+    let setName = namef.value.trim();
+    let setEmail = email.value.trim();
+
+    if (setName === "") {
+        namef.style.borderBottom = "1px solid red";
+        message.style.display = "block";
+    } else {
+        namef.style.borderBottom = "1px solid rgb(158, 60, 163)";
+        message.style.display = "none";
+    }
+
+    //js to enter email in the form
+    const reversedStr = [...setEmail].reverse().join("");
+    emailPattern = reversedStr.slice(0, 10);
+    emailPattern = [...emailPattern].reverse().join("");
+
+    if (emailPattern === "@gmail.com") {
         emailf.style.borderBottom = "1px solid rgb(158, 60, 163)";
         error.style.display = "none";
-        window.alert("Your message has been sent!");
-    }
-    else {
+    } else {
         emailf.style.borderBottom = "1px solid red";
         error.style.display = "block";
+    }
+
+    //js to display an appropriate message
+    if (setName === "" || setEmail === "") {
+        message.textContent = "Please enter your name!";
+    } else {
+        message.textContent = "Your message has been sent!";
+        window.alert("Your message has been sent!");
     }
 });
