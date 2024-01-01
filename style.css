@@ -23,6 +23,7 @@
 }
 body {
     background-color: var(--background-primary);
+    overflow-x: hidden;
 }
 header {
     position: relative;
@@ -78,6 +79,12 @@ header.sticky {
     background: var(--background-secondary);
     border-bottom: 1px solid #ffffff1a;
     padding: 12px 15%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
 }
 
 section {
@@ -95,6 +102,7 @@ section {
     color: var(--light);
     text-align: start;
     font-family: 'Playfair', sans-serif;
+    margin-top: -20px;
 }
 .home-text .intro {
     font-size: 71px;
@@ -275,8 +283,7 @@ h2 {
     padding-top: 10px;
 }
 .project h2 {
-    margin: 40px 33.8% 20px;
-    display: inline;
+    text-align: center;
     color: var(--light);
 }
 .project-container {
@@ -484,4 +491,316 @@ input {
 }
 .show-scroll {
     bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+    .logo {
+        margin-left: 20px;
+        font-size: 28px;
+    }
+    .logo span {
+        font-size: 25px;
+    }
+    .nav-links {
+        flex-direction: row;
+        align-items: flex;
+    }
+
+    section {
+        padding: 0px 30px;
+    }
+    .home {
+        height: 90vh;
+    }
+    .home-text .intro {
+        font-size: 30px;
+    }
+    .home-text .text {
+        font-size: 30px;
+    }
+    .home-text .intro span, span {
+        font-size: 36px;
+    }
+    .line {
+        margin-left: 0;
+    }
+    section img {
+        margin: 10px 5px;
+        height: 340px;
+        width: 200px;
+    }
+    
+    .about {
+        flex-direction: column;
+        height: auto;
+    }
+    .about img {
+        margin: 20px 0;
+        align-self: center;
+        height: 320px;
+        width: 250px;
+    }
+    .about-text {
+        margin: 0px 20px;
+    }
+    .about-text span {
+        font-size: 65px;
+    }
+    .btn {
+        margin-top: 20px;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .skills h2 {
+        margin: 0px;
+        text-align: center;
+    }
+    .skills h2 span {
+        font-size: 65px;
+    }
+    .skill-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem 10%;
+    }
+
+    .project h2 {
+        margin: 20px 32px;
+    }
+    .project h2 span {
+        font-size: 65px;
+    }
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem 10%;
+        grid-gap: 0.7rem;
+        margin-top: 10px;
+    }
+    .project-box {
+        margin-bottom: 0px;
+    }
+    .project-box .name {
+        font-size: 17px;
+    }
+    .project-title {
+        width: 92%; 
+        padding: 0 20px; 
+        transform: translate(8px, -45px); 
+    }
+    .project-title p {
+        font-size: 12px; 
+        padding-top: 10px; 
+    }
+    .project-title i {
+        width: 40px; 
+        height: 40px; 
+        font-size: 15px; 
+        margin: 15px; 
+    }
+
+    .contact-box {
+        flex-direction: row;
+        margin-top: 110px;
+        height: 80px;
+    }
+    .head {
+        margin-top: 0;
+    }
+    .form {
+        margin-left: 20px;
+        width: 100%;
+    }
+    .name-details, .email-details {
+        width: 100%;
+        margin-left: 0;
+    }
+    .message, .error {
+        margin-left: 200px;
+    }
+    .msg-details {
+        margin-left: 0;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+    .contact button {
+        margin-left: 0px;
+    }
+    #btn {
+        margin-top: 20px;
+    }
+    .scrollup {
+        bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .logo span {
+        font-size: 36px;
+    }
+
+    .home-text .intro {
+        font-size: 50px;
+    }
+    .home-text .text {
+        font-size: 50px;
+    }
+    .home-text .intro span, span {
+        font-size: 50px;
+    }
+    .line {
+        margin-left: 30px;
+    }
+    section img {
+        margin: 10px 5px;
+        height: 400px;
+        width: 300px;
+    }
+    
+    .about {
+        flex-direction: row;
+        height: auto;
+    }
+    .about img {
+        margin: 20px 20px;
+        align-self: center;
+        height: 390px;
+        width: 320px;
+    }
+
+    .project-title {
+        width: 96%; 
+        padding: 0 20px; 
+        transform: translate(6px, -35px); 
+    }
+
+    .contact-box {
+        flex-direction: row;
+        margin-top: 110px;
+        height: 270px;
+    }
+    .message, .error {
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .logo span {
+        font-size: 30px;
+    }
+
+    .home {
+        height: 70vh;
+    }
+    .home-text .intro {
+        font-size: 15px;
+    }
+    .home-text .text {
+        font-size: 15px;
+    }
+    .home-text .intro span, span {
+        font-size: 15px;
+    }
+    .line {
+        margin-left: 0;
+        width: 100px;
+    }
+    section img {
+        margin: 10px 10px;
+        height: 250px;
+        width: 170px;
+    }
+    
+    .about {
+        flex-direction: column;
+    }
+    .about-text h2 {
+        font-size: 40px;
+    }
+    .about-text p {
+        font-size: 12px;
+    }
+    .about-text span {
+        font-size: 40px;
+    }
+    .about img {
+        margin: 20px 20px;
+        align-self: center;
+        height: 280px;
+        width: 220px;
+    }
+    .btn {
+        font-size: 10px;
+        padding: 4px 9px;
+        width: 90px;
+        margin-top: 15px;
+    }
+
+    .skills h2 span {
+        font-size: 40px;
+    }
+    .skill-title .name {
+        font-size: 20px;
+    }
+    .skill-box p {
+        font-size: 10px;
+    }
+    .skill-title img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .project h2 {
+        margin: 20px 20px;
+        font-size: 40px;
+    }
+    .project h2 span {
+        font-size: 40px;
+    }
+    .project-container img {
+        width: 100%;
+        height: 120px;
+    }
+    .project-box .name {
+        font-size: 12px;
+    }
+    .project-title {
+        width: 87%; 
+        transform: translate(7px, -35px); 
+    }
+    .project-title p {
+        font-size: 8px; 
+        padding-top: 40px; 
+    }
+
+    .contact-box {
+        flex-direction: column;
+        margin-top: 110px;
+        height: 420px;
+    }
+    .contact-box {
+        height: 310px;
+    }
+    .head h2 {
+        font-size: 40px;
+    }
+    .head p {
+        font-size: 12px;
+    }
+    .message, .error {
+        margin-left: 130px;
+    }
+    .msg-details {
+        margin-top: 0;
+    }
+    .contact button {
+        font-size: 10px;
+        width: 110px;
+    }
+    #btn {
+        height: 22px;
+        margin-top: 15px;
+    }
 }

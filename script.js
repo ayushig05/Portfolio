@@ -1,8 +1,15 @@
 //js for making header sticky
 const header = document.querySelector("header");
-window.addEventListener("scroll", function() {
-    header.classList.toggle("sticky", window.scrollY > 100);
-});
+const stick = header.offsetTop;
+function handleScroll() {
+    if (window.scrollY > stick) {
+        header.classList.add("sticky");
+    }
+    else {
+        header.classList.remove("sticky");
+    }
+}
+window.addEventListener("scroll", handleScroll);
 
 
 
@@ -53,11 +60,8 @@ send.addEventListener("click", function() {
     }
 
     //js to enter email in the form
-    const reversedStr = [...setEmail].reverse().join("");
-    emailPattern = reversedStr.slice(0, 10);
-    emailPattern = [...emailPattern].reverse().join("");
-
-    if (emailPattern === "@gmail.com") {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailRegex.test(setEmail)) {
         emailf.style.borderBottom = "1px solid rgb(158, 60, 163)";
         error.style.display = "none";
     } else {
