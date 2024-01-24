@@ -1,3 +1,11 @@
+//js for preloader
+var loader = document.querySelector(".center");
+window.addEventListener("load", function() {
+    loader.style.display = "none";
+});
+
+
+
 //js for making header sticky
 const header = document.querySelector("header");
 const stick = header.offsetTop;
@@ -10,6 +18,16 @@ function handleScroll() {
     }
 }
 window.addEventListener("scroll", handleScroll);
+
+
+
+//js for text-typing
+var typed = new Typed(".auto-typed", {
+    strings: ["Ayushi Gupta", "a Front-End Web Developer", "a Java Programmer"],
+    typeSpeed : 120,
+    backSpeed : 120,
+    loop : true
+});
 
 
 
