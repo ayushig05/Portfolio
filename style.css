@@ -25,57 +25,6 @@ body {
     background-color: var(--background-primary);
     overflow-x: hidden;
 }
-.center {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-.center-ring {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    animation: ring 20s linear infinite;
-}
-@keyframes ring {
-    0% {
-        transform: rotate(0deg);
-        box-shadow: 1px 5px 2px #e65c00;
-    }
-    50% {
-        transform: rotate(180deg);
-        box-shadow: 1px 5px 2px #18b201;
-    }
-    100% {
-        transform: rotate(360deg);
-        box-shadow: 1px 5px 2px #0456c8;
-    }
-}
-.center-ring:before {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 0 0 20s rgba(255, 255, 255, 0.3);
-}
-.center span {
-    color: #737373;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 200px;
-    animation: text 3s ease-in-out infinite;
-}
-@keyframes text {
-    50% {
-        color: black;
-    }
-}
 
 header {
     position: relative;
@@ -469,7 +418,7 @@ h2 {
 .contact-box {
     margin-top: 30px;
     width: 90%;
-    height: 350px;
+    height: 450px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -510,7 +459,7 @@ h2 {
     margin-left: 100px;
     width: 900px;
 }
-.name-details, .email-details {
+.name-details, .email-details, .phone-details {
     border-bottom: 1px solid var(--light);
     height: 43px;
     width: 400px;
@@ -519,7 +468,7 @@ h2 {
     display: flex;
 }
 .msg-details {
-    height: 107px;
+    height: 90px;
     margin-left: 100px;
     margin-top: 10px;
     margin-right: 33px;
@@ -544,7 +493,7 @@ input {
     margin-left: 330px;
     display: none;
 }
-.message {
+.message, .messages {
     color: var(--light);
     margin-left: 347px;
     display: none;
@@ -700,7 +649,7 @@ input {
     .contact-box {
         flex-direction: row;
         margin-top: 110px;
-        height: 80px;
+        height: 100px;
     }
     .head {
         margin-top: 0;
@@ -709,11 +658,11 @@ input {
         margin-left: 20px;
         width: 100%;
     }
-    .name-details, .email-details {
+    .name-details, .email-details, .phone-details {
         width: 100%;
         margin-left: 0;
     }
-    .message, .error {
+    .message, .error, .messages {
         margin-left: 200px;
     }
     .msg-details {
@@ -771,9 +720,9 @@ input {
     .contact-box {
         flex-direction: row;
         margin-top: 110px;
-        height: 270px;
+        height: 320px;
     }
-    .message, .error {
+    .message, .error, .messages {
         margin-left: 100px;
     }
 }
@@ -896,7 +845,7 @@ input {
         height: 420px;
     }
     .contact-box {
-        height: 310px;
+        height: 380px;
     }
     .head h2 {
         font-size: 40px;
@@ -904,7 +853,7 @@ input {
     .head p {
         font-size: 12px;
     }
-    .message, .error {
+    .message, .error, .messages {
         margin-left: 130px;
     }
     .msg-details {

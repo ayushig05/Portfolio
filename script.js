@@ -1,11 +1,3 @@
-//js for preloader
-var loader = document.querySelector(".center");
-window.addEventListener("load", function() {
-    loader.style.display = "none";
-});
-
-
-
 //js for making header sticky
 const header = document.querySelector("header");
 const stick = header.offsetTop;
@@ -56,9 +48,12 @@ window.addEventListener("scroll", scrollUp);
 
 //js for filling up the form
 let send = document.querySelector("#btn");
-let namef = document.querySelector('#fname');
+let namef = document.querySelector("#fname");
 let name = document.querySelector(".name-details");
 let message = document.querySelector(".message");
+let phonef = document.querySelector("#fno");
+let phone = document.querySelector(".phone-details");
+let messages = document.querySelector(".messages");
 let email = document.querySelector("#email");
 let emailf = document.querySelector(".email-details");
 let error = document.querySelector(".error");
@@ -67,6 +62,7 @@ let emailPattern;
 send.addEventListener("click", function() {
     //js to enter name in the form
     let setName = namef.value.trim();
+    let setNumber = phonef.value.trim();
     let setEmail = email.value.trim();
 
     if (setName === "") {
@@ -75,6 +71,15 @@ send.addEventListener("click", function() {
     } else {
         namef.style.borderBottom = "1px solid rgb(158, 60, 163)";
         message.style.display = "none";
+    }
+
+    //js to enter phone no in the form
+    if (setNumber === "") {
+        phonef.style.borderBottom = "1px solid red";
+        messages.style.display = "block";
+    } else {
+        phonef.style.borderBottom = "1px solid rgb(158, 60, 163)";
+        messages.style.display = "none";
     }
 
     //js to enter email in the form
@@ -88,8 +93,12 @@ send.addEventListener("click", function() {
     }
 
     //js to display an appropriate message
-    if (setName === "" || setEmail === "") {
+    if (setName === "") {
         message.textContent = "Please enter your name!";
+    } else if (setEmail === "") {
+        message.textContent = "Please enter your email!";
+    } else if (setNumber === "") {
+        message.textContent = "Please enter your phone no.!";
     } else {
         message.textContent = "Your message has been sent!";
         window.alert("Your message has been sent!");

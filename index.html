@@ -10,11 +10,6 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="center">
-        <div class="center-ring"></div>
-        <span>Loading...</span>
-    </div>
-
     <header class="sticky">
         <a href="#" class="logo">Cod<span>e</span>r</a>
         <ul class="nav-links">
@@ -105,9 +100,9 @@
                     <div class="img">
                         <img class="icon" src="./images/bootstrap.jpeg" alt="Error">
                     </div>
-                    <div class="name">Bootstrap</div>
+                    <div class="name">Bootstrap 5</div>
                 </div>
-                <p>Bootstrap is a framework for creating responsive and mobile-first web development.</p>
+                <p>Bootstrap 5 is a framework for creating responsive and mobile-first web development.</p>
             </div>
         </div>
     </div>
@@ -180,17 +175,21 @@
                 </div>
             </div>
 
-            <div class="form">
+            <div class="form" onsubmit="sendEmail(); reset(); return false;">
                 <div class="name-details">
                     <input type="text" id="fname" placeholder="Name">
                 </div>
                 <p class="message">Please enter your name!</p>
+                <div class="phone-details">
+                    <input type="number" id="fno" placeholder="Phone No.">
+                </div>
+                <p class="messages">Please enter your phone no.!</p>
                 <div class="email-details">
                     <input type="text" id="email" placeholder="Email">
                 </div>
                 <div class="error">Sorry, invalid format here!</div>
                 <div class="msg-details">
-                    <input type="text" id="email" placeholder="Message">
+                    <input type="text" id="msg" placeholder="Message">
                 </div>
                 <button id="btn">SEND MESSAGE</button>
             </div>
